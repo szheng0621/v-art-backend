@@ -1,0 +1,59 @@
+{
+  "GET /api": {
+    "description": "serves up a json representation of all the available endpoints of the api"
+  },
+  "GET /api/collections": {
+    "description": "serves an array of all collections, Categories like painting, sculpture, etc.",
+    "queries": [],
+    "exampleResponse": {
+      "collections": [
+        {
+          "slug": "image",
+          "description": "Image-based artworks"
+        }
+      ]
+    }
+  },
+  "GET /api/artworks": {
+    "description": "serves an array of all artworks, Stores unified artwork data -normalized from APIs",
+    "queries": [
+      "sort_by (default: created_at)",
+      "order (default: desc)",
+      "collection",
+      "title",
+      "location"
+    ],
+    "exampleResponse": {
+      "artworks": [
+        {
+          "title": "The Thinker",
+          "collection": "sculpture",
+          "artist": "Auguste Rodin",
+          "description": "A bronze sculpture representing philosophy and introspection.",
+          "created_at": "2005-01-01T00:00:00.000Z",
+          "size": "71.5cm x 40cm x 58cm",
+          "location": "Musée Rodin, Paris",
+          "artwork_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/The_Thinker%2C_Rodin.jpg/800px-The_Thinker%2C_Rodin.jpg"
+        }
+      ]
+    }
+  },
+
+  "GET /api/artworks/:artwork_id": {
+  "description": "serves a single artwork by ID",
+  "exampleResponse": {
+    "artwork": {
+      "artwork_id": 5,
+      "title": "The Thinker",
+      "collection": "sculpture",
+      "artist": "Auguste Rodin",
+      "description": "A bronze sculpture...",
+      "created_at": "2005-01-01T00:00:00.000Z",
+      "size": "71.5cm x 40cm x 58cm",
+      "location": "Musée Rodin, Paris",
+      "artwork_img_url": "https://..."
+    }
+  }
+}
+
+}
