@@ -13,11 +13,11 @@ const {
   postArtworkToUserExhibition,
   deleteUserArtworkById,
 } = require("./controllers/artworks_controllers.js");
-// const cors = require("cors");
+const cors = require("cors");
 
 app.use(express.json());
 
-// app.use(cors());
+app.use(cors());
 
 app.get("/api", (request, response) => {
   response.status(200).send({ endpoints: endpoints });
