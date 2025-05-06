@@ -48,9 +48,9 @@ const fetchAndSeed = async () => {
     ]);
 
     const allArtworkData = [
-      ...artworksData.slice(0, 5),
-      ...rijksData.slice(0, 5),
-      ...europeanaData.slice(0, 5),
+      ...artworksData.slice(0, 6),
+      ...rijksData.slice(0, 10),
+      ...europeanaData.slice(0, 10),
     ];
 
     console.log(">>> All artwork to seed:", allArtworkData.length);
