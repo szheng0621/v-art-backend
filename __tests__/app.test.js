@@ -408,3 +408,15 @@ describe("/api/users/:username/exhibitions/:exhibition_id/artworks", () => {
       });
   });
 });
+
+// describe.only("GET /api/artworks?search=", () => {
+//   test("200: responds with artworks matching the search term (case-insensitive partial match)", () => {
+//     return request(app)
+//     .get("/api/artworks?search=painitng")
+//     .expect(200)
+//     .then(({ body }) => {
+//     expect(Array.isArray(body.artworks)).toBe(true);
+//     expect(artwork.title.toLowerCase()).toContain("painitng");
+//     })
+//   });
+// })
